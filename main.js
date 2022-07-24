@@ -5,25 +5,25 @@ const secs = document.querySelector(".secs-txt");
 
 const updateClock = () => {
   window.setInterval(() => {
-    const launchDate = new Date("Jan 1 2023 00:00:00").getTime();
+    let launchDate = new Date("Jan 1 2023 00:00:00").getTime();
 
-    const today = new Date().getTime();
+    let today = new Date().getTime();
 
-    const currentMilliseconds = launchDate - today;
+    let currentMilliseconds = launchDate - today;
 
-    const seconds = 1000;
+    let seconds = 1000;
 
-    const minutes = seconds * 60;
+    let minutes = seconds * 60;
 
-    const hours = minutes * 60;
+    let hours = minutes * 60;
 
-    const day = hours * 24;
+    let day = hours * 24;
 
     let countDay = Math.floor(currentMilliseconds / day);
 
     countDay = countDay < 10 ? "0" + countDay : countDay;
 
-    let countHour = Math.floor(currentMilliseconds % day) / hours;
+    let countHour = Math.floor((currentMilliseconds % day) / hours);
 
     countHour = countHour < 10 ? "0" + countHour : countHour;
 
