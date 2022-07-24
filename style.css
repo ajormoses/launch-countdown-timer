@@ -113,7 +113,7 @@ main {
 }
 
 .secs {
-  animation: scale 1.6s ease 4.2s forwards;
+  animation: scale 1.4s ease 4.2s forwards;
 }
 
 @keyframes scale {
