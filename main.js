@@ -1,23 +1,23 @@
 const days = document.querySelector(".days-txt");
-const hours = document.querySelector(".hours-txt");
+const hrs = document.querySelector(".hours-txt");
 const mins = document.querySelector(".mins-txt");
 const secs = document.querySelector(".secs-txt");
 
 const updateClock = () => {
   window.setInterval(() => {
-    let launchDate = new Date("Jan 1 2023 00:00:00").getTime();
+    const launchDate = new Date("Jan 1, 2023 00:00:00").getTime();
 
-    let today = new Date().getTime();
+    const today = new Date().getTime();
 
-    let currentMilliseconds = launchDate - today;
+    const currentMilliseconds = launchDate - today;
 
-    let seconds = 1000;
+    const seconds = 1000;
 
-    let minutes = seconds * 60;
+    const minutes = seconds * 60;
 
-    let hours = minutes * 60;
+    const hours = minutes * 60;
 
-    let day = hours * 24;
+    const day = hours * 24;
 
     let countDay = Math.floor(currentMilliseconds / day);
 
@@ -36,7 +36,7 @@ const updateClock = () => {
     countSeconds = countSeconds < 10 ? "0" + countSeconds : countSeconds;
 
     days.innerHTML = countDay;
-    hours.innerHTML = countHour;
+    hrs.innerHTML = countHour;
     mins.innerHTML = countMinutes;
     secs.innerHTML = countSeconds;
   }, 1);
